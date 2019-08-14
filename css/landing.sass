@@ -1,0 +1,564 @@
+﻿$blue: #14a3b3 //это, ясен пень, бирюзовый, но на английском хрен запомнишь
+$yellow: #e5c982
+$brick: #e96651
+$red: #b22023
+$purp: #a1abe1
+$green: #81dc9d
+=placeholder($color)
+	&::-webkit-input-placeholder 
+		color: $color
+	&::-moz-placeholder 
+		color: $color
+	&:-ms-input-placeholder
+		color: $color
+		
+=pos
+	display: block
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	
+=obj
+	object-fit: cover
+	object-position: center
+	
+.landing
+	font: normal 300 16px/1.75 "Proxima Nova",sans-serif
+	color: #2f2e2e
+	
+p
+	font-size: inherit
+	&:last-child
+		margin-bottom: 0
+h2
+	font-size: 32px
+	font-weight: 400
+	letter-spacing: .04em
+	line-height: 36/32*1
+	text-transform: uppercase
+	margin: 0 0 13px
+h3
+	font-size: 20px
+	font-weight: 400
+	line-height: 1.15
+	margin: 0 0 .8em
+	
+ol
+	list-style: none
+	padding: 0 0 0 40px
+	margin: 0
+	counter-reset: list
+	>li
+		position: relative
+		margin: 0 0 1.26em
+		&:last-child
+			margin: 0
+		&:before
+			counter-increment: list
+			content: counter(list)
+			display: inline-block
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			background-color: $yellow
+			text-align: center
+			line-height: 20px
+			font-size: 13px
+			position: absolute
+			left: -40px
+			top: 4px
+	
+.btn
+	appearance: none
+	border: none
+	display: inline-block
+	cursor: pointer
+	font-size: 13px
+	font-weight: 400
+	line-height: 18/13*1
+	padding: 9px 27px
+	text-align: center
+	border-radius: 100px
+	background-color: $yellow
+	color: #fff
+	user-select: none
+	&--blue
+		background-color: $blue
+		box-shadow: 0 0 15px 3px transparentize($blue,.5)
+	&--white
+		background-color: #fff
+		color: $blue
+		&:hover
+			color: $blue !important 
+	&--big
+		font-size: 16px
+		text-transform: uppercase
+		padding: 16px 27px
+	&--block
+		display: block
+		width: 100%
+		padding-left: 10px
+		padding-right: 10px
+		
+/*ШАПКА*/
+.logo
+	display: inline-flex
+	align-items: center
+	vertical-align: top
+	color: inherit
+	text-transform: uppercase
+	font-weight: 400
+	line-height: 18/14*1
+	font-size: 14px
+	&__img
+		width: 107px
+		margin-right: 10px
+	&__text
+		display: inline-block
+		width: 180px
+		padding: 13px 0 13px 15px
+		border-left: 1px solid $blue
+	&:hover
+		color: inherit !important 
+.header
+	&__topline
+		color: #3b3b44
+		background-color: #fff
+		padding: 10px 0
+	&__phone
+		display: block
+		color: inherit
+		font-size: 20px
+		line-height: 1
+		margin: 0 0 10px
+	&__bottomline
+		background-color: $blue
+		color: #fff
+		border-bottom: 2px solid
+	&__menu
+		margin: 0
+		padding: 0
+		font-size: 14px
+		font-weight: 400
+		ul
+			display: none
+		a
+			display: block
+			color: inherit
+		>li
+			display: inline-block
+			vertical-align: top
+			margin: 0 38px 0 0
+			position: relative
+			>a
+				text-transform: uppercase
+				position: relative
+				padding: 18px 0
+			&.has-children
+				>a
+					padding-right: 20px
+					&:after
+						content: '\f078'
+						line-height: 1
+						font-family: fontAwesome
+						display: inline-block
+						position: absolute
+						right: 4px
+						font-size: .6em
+						top: calc(50% - .5em)					
+		
+	&__login
+		display: block
+		background-color: #0a909f
+		color: #fff
+		font-size: 14px
+		padding: 18px
+		text-align: center
+		user-select: none
+		&:before
+			content: '\f007'
+			font-family: fontAwesome
+			margin-right: 5px
+		
+/*ОСНОВНОЕ СОДЕРЖИМОЕ*/
+.video-link
+	display: block
+	max-width: 490px	
+	position: relative
+	&:before
+		content: ''
+		display: block
+		width: 55px
+		height: 55px
+		background: url(../img/icons/play.svg) no-repeat center/contain
+		position: absolute
+		left: calc(50% - 27.5px)
+		top: calc(50% - 27.5px)
+		z-index: 1
+		filter: drop-shadow(0 0 10px transparentize($yellow,.3))
+	&__bg
+		display: block
+		width: 100%
+	&__poster
+		position: absolute
+		width: 75.7%
+		height: 82%
+		top: 7%
+		left: 12.2%
+		opacity: .4
+		+obj
+.top-block
+	background: url(../img/top.jpg) no-repeat center/cover
+	padding: 131px 0 162px
+	color: #fff
+	clip-path: polygon(0 0, 100% 0,100% calc(100% - 40px),0 100%)
+	&__item
+		padding-left: 80px
+		position: relative
+		font-size: 18px
+		line-height: 40/18*1
+		font-weight: 400
+		margin: 0 0 26px
+		&:last-child
+			margin: 0
+	&__icon
+		width: 65px
+		height: 65px
+		border-radius: 50%
+		border: 1px solid $yellow
+		background: radial-gradient(circle at center,lighten($blue,30),$blue)
+		position: absolute
+		top: 5px
+		left: 0
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			max-width: 50%
+			max-height: 50%
+	&__subtitle
+		font-size: 32px
+		line-height: 40/32*1
+		font-weight: bold
+		color: $yellow
+		width: calc(100% + 50px)
+		margin: 0 0 4px
+	&__media
+		margin: 15px auto 0
+.service-card
+	width: 445px
+	max-width: 100%
+	background-color: #f7fafd 
+	border: 1px solid #dbe7f2
+	border-radius: 6px
+	padding: 30px 30px 67px
+	text-align: center
+	font-size: 14px
+	line-height: 2
+	margin: 0 15px 30px
+	color: #2f2e2e
+	&__pic
+		width: 110px
+		height: 110px
+		margin: 0 auto 15px
+		position: relative
+		background: repeating-linear-gradient(-45deg,white 0,white 3px,transparent 3px, transparent 12px)
+		user-select: none
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: -6px
+			left: -15px
+			width: calc(100% + 10px)
+			height: calc(100% + 10px)
+			background: url(../img/figures.svg) no-repeat center/contain
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			width: 60%
+			max-height: 80%
+			z-index: 1
+			object-fit: contain
+			object-position: center
+	&__title
+		text-align: center
+	&__text
+		ul
+			padding: 0
+			margin: 0
+			>li
+				&:before
+					content: '•'
+					display: inline-block
+					color: $blue
+					margin-right: 15px
+	&--light
+		width: auto
+		margin: 0
+		min-height: 100%
+		border: 2px dotted $blue
+		text-align: left
+		padding: 30px 37px 43px
+	&--light
+		ul>li
+			position: relative
+			padding-left: 20px
+			&:before
+				position: absolute
+				left: 0
+	&.slick-slide
+		margin: 0
+		transform: translateX(200.5%) scale(.5)
+		//transform-origin: right center
+		transition: transform .3s linear
+		height: auto
+		opacity: 1
+	&.slick-active
+		transform: translateX(40%) scale(.7) 
+	&.slick-current
+		transform: scale(1)
+		//transform-origin: center
+		position: relative
+		z-index: 2
+		border-color: $blue
+	&.slick-current ~ &
+		//transform-origin: left center
+		transform: translateX(-200.5%) scale(.5) 
+	&.slick-current + &
+		transform: translateX(-40%) scale(.7)
+		position: relative
+		z-index: 1
+		
+.presentation
+	padding: 85px 0 92px
+	&__head
+		max-width: 800px
+		margin: 0 auto 46px
+		font-size: 24px
+		line-height: 30/24*1
+		text-align: center
+		font-weight: 400
+	&__slider
+		margin: 0 0 65px
+		&:not(.slick-initialized)
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			margin: 0 -15px 65px
+		.slick-track
+			display: flex
+		
+.reasons
+	padding: 135px 0 125px
+	background: url(../img/pattern.svg),#f9fbfd
+	clip-path: polygon(0 40px,100% 0,100% calc(100% - 40px),0 100%)
+	&__title
+		text-align: center
+		max-width: 730px
+		margin: 0 auto 1.3em
+	&__body
+		margin: 0 0 40px
+	&__menu
+		padding: 0
+		margin: 0 7.5px 0 0
+		border-radius: 6px 0 0 6px
+		background-color: $yellow
+		font-weight: 400
+		line-height: 20/16*1
+		>li
+			position: relative
+			border-bottom: 2px solid #fff
+			padding: 20px 15px 20px 95px
+			&:before
+				content: ''
+				display: block
+				width: 50px
+				height: 50px
+				border-radius: 50%
+				background-color: #fff
+				border: 1px dashed $yellow
+				position: absolute
+				left: 29px
+				top: calc(50% - 25px)
+			img
+				position: absolute
+				left: 54px
+				top: 50%
+				transform: translate(-50%,-50%)
+				z-index: 1
+				max-width: 25px
+				max-height: 25px
+	&__text
+		background-color: #fff
+		padding: 26px 27px 38px 16px
+		border-radius: 0 6px 6px 6px
+		margin-left: -7.5px
+.about-block
+	padding: 85px 0 88px
+	&__title
+		text-align: center
+		margin: 0 0 2.3em
+	&__body
+		padding: 83px 0 97px
+		background: url(../img/dot-map.png) no-repeat center/contain
+	&__item
+		margin: 0 0 71px
+		text-align: center
+		color: $brick
+		line-height: 1.25
+		font-weight: 600
+	&__subtitle
+		font-size: 75px
+		font-weight: 600
+		line-height: 1
+		margin: 0 0 8px
+	&__text
+		border: 1px solid
+		border-radius: 6px
+		background-color: #fff
+		min-height: 60px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding: 9px
+.advantages
+	background: url(../img/pattern.svg),#f9fbfd
+	clip-path: polygon(0 40px,100% 0,100% calc(100% - 40px),0 100%)
+	padding: 120px 0 130px
+	height: 1245px
+	&__title
+		max-width: 690px
+		text-align: center
+		margin: 0 auto 1em
+.scheme
+	padding: 84px 0 62px
+	&__title
+		max-width: 600px
+		text-align: center
+		margin: 0 auto 1.5em
+	&__item
+		margin: 0 0 35px
+		text-align: center
+	&__pic
+		width: 120px
+		height: 120px
+		border-radius: 50%
+		border: 2px dotted $blue
+		margin: 0 auto 23px
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 8px
+			left: 1px
+			width: calc(100% + 3px)
+			height: calc(100% + 3px)
+			background: url(../img/figures1.svg) no-repeat center/contain
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			max-width: 50%
+			max-height: 50%
+.services
+	padding: 126px 0 130px
+	background: url(../img/blue-bg.jpg) no-repeat center/cover
+	clip-path: polygon(0 40px,100% 0,100% calc(100% - 40px),0 100%)
+	color: #fff
+	position: relative
+	&__icon
+		position: absolute
+		top: 139px
+		left: calc(50% - 648px)
+	&__head
+		max-width: 815px
+		font-size: 24px
+		line-height: 30/24*1
+		font-weight: 400
+		text-align: center
+		margin: 0 auto 1.9em
+	&__title
+		letter-spacing: .04em
+	&__item
+		margin-bottom: 38px
+.security
+	background: url(../img/pattern.svg),#f9fbfd
+	clip-path: polygon(0 40px,100% 0,100% calc(100% - 40px),0 100%)
+	padding: 126px 0 130px
+	@supports(clip-path: polygon(0 0,100% 0,100% 100%))
+		margin-top: -40px
+	&__title
+		max-width: 950px
+		margin: 0 auto 1.3em
+		text-align: center
+	&__trigger
+		position: relative
+		padding-bottom: 44px
+		cursor: pointer
+		user-select: none
+		&:before
+			content: ''
+			display: block
+			width: 180px
+			height: 180px
+			border-radius: 50%
+			border: 2px dotted #fff
+			background-color: $brick
+			position: absolute
+			bottom: 20px
+			left: calc(50% - 90px)
+			opacity: .4
+			transition: all .3s ease
+		&.active
+			&:before
+				opacity: 1
+		&:after
+			content: ''
+			display: block
+			width: 195px
+			height: 97px
+			background: url(../img/circles.svg) no-repeat center/contain
+			position: absolute
+			bottom: 90px
+			right: 31px
+		img
+			display: block
+			margin: 0 auto
+			position: relative
+			z-index: 1
+	&__trigger-btn
+		position: absolute
+		z-index: 1
+		bottom: 0
+		left: 15px
+		width: calc(100% - 30px)
+		min-height: 60px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		color: #fff
+		font-weight: 600
+		line-height: 20/16*1
+		text-align: center
+		border: 1px solid $brick
+		border-radius: 6px
+		background-color: $brick
+		padding: 9px
+		transition: all .3s ease
+		.active>&
+			color: $brick
+			background-color: #fff		
+
+		
+/*ПОДВАЛ*/
+
+/*АДАПТИВ*/
+@import "adaptive"

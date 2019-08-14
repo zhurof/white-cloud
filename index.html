@@ -1,0 +1,485 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Верстка</title>
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no" />		
+	<link href="https://whitecloud24.ru/assets/components/templates/style.css" rel="stylesheet">
+	<link href="https://whitecloud24.ru/assets/components/templates/mystyle.css" rel="stylesheet">
+	<link href="https://whitecloud24.ru/assets/components/templates/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+	
+	<!--Шрифты с удаленного сайта не грузятся из-за CORS политики. Поэтому подключаю локально. При посадке на сайт можно удалить всесте папкой fonts -->
+	<link href="css/fonts.css" rel="stylesheet">
+	
+	<!--fancybox-->
+	<link href="libs/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+	
+	<!--slick-slider
+		Я понимаю, что к существующему сайту уже подключены 2 слайдера (owlCarousel и bxSlider), но
+		1) они откровенно говоря - говно
+		2) у меня нет никакого желания переопределять стили, которые разработчик задал непосредственно элементам слайдера
+		3) В style.css остались даже какие-то стили для slick
+	-->
+	<link href="libs/slick/slick.css" rel="stylesheet">
+	
+	<!--Стили для лендинга. Лучше подключать с условием только для этой страницы-->
+	<link href="css/landing.css" rel="stylesheet">
+</head>
+<body class="landing">
+	<header class="header">
+		<div class="header__topline">
+			<div class="container">
+				<div class="row align-items-end">
+					<div class="col-sm-6">
+						<a href="/" class="logo">
+							<img src="img/logo.jpg" alt="" class="logo__img">
+							<span class="logo__text">Удаленные серверы для малого бизнеса</span>
+						</a>
+					</div>
+					<div class="col-sm-6 text-right">
+						<a href="+74992130450" class="header__phone">+7 (499) 213-04-50</a>
+						<button class="btn modal-phone">Перезвоните мне</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottomline">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-9">
+						<ul class="header__menu">
+							<li class="has-children">
+								<a href="#">Аренда серверов</a>
+								<ul>
+									<li><a href="#">Облачная инфраструктура «Белое Облако»</a></li>
+									<li><a href="#">Аренда терминального сервера RDP</a></li>
+									<li><a href="#">Аренда почтового сервера</a></li>
+									<li><a href="#">Аренда ПО Microsoft</a></li>
+									<li><a href="#">Сервер 1С в Облаке</a></li>
+									<li><a href="#">Поддержка и обслуживание в «Белом Облаке», SLA</a></li>
+								</ul>
+							</li>
+							<li class="has-children">
+								<a href="#">Услуги</a>
+								<ul>
+									<li><a href="#">ИТ аутсорсинг для бизнеса</a></li>
+									<li><a href="#">Система автоматического переключения интернет-канала</a></li>
+									<li><a href="#">Выкуп серверного оборудования</a></li>
+								</ul>
+							</li>
+							<li class="has-children">
+								<a href="#">Безопасность</a>
+								<ul>
+									<li><a href="#">Безопасность в «Белом Облаке»</a></li>
+									<li><a href="#">Сценарий работы с программами «Белый список»</a></li>
+									<li><a href="#">Система резервного копирования</a></li>
+									<li><a href="#">Системы контроля продуктивности сотрудников</a></li>
+									<li><a href="#">Двухфакторная аутентификация</a></li>
+									<li><a href="#">Система экстренного отключения</a></li>
+								</ul>
+							</li>
+							<li class="has-children">
+								<a href="#">Клиентам</a>
+								<ul>
+									<li><a href="#">Тест скорости</a></li>
+									<li><a href="#">Документы</a></li>
+								</ul>
+							</li>							
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<a href="#" class="header__login">Войти в личный кабинет</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="top-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="top-block__item">
+							<div class="top-block__icon">
+								<img src="img/icons/net.png" alt="">
+							</div>
+							<h3 class="top-block__subtitle">Аренда Серверов Россия/Европа</h3>
+							<p>Терминальные, почтовые, 1С, SQL</p>
+						</div>
+						<div class="top-block__item">
+							<div class="top-block__icon">
+								<img src="img/icons/atom.png" alt="">
+							</div>
+							<h3 class="top-block__subtitle">Комплексная ИТ-поддержка</h3>
+							<p>Пользователей, компьютеров, серверов, по SLA</p>
+						</div>
+						<div class="top-block__item">
+							<div class="top-block__icon">
+								<img src="img/icons/1c.png" alt="">
+							</div>
+							<h3 class="top-block__subtitle">Решения 1С</h3>
+							<p>1С в облаке, выделенные сервера 1С, доработки, сопоровождение</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<a href="https://www.youtube.com/embed/EV5vjsUJqgE" class="video-link top-block__media" data-fancybox>
+							<img src="img/laptop.png" alt="" class="video-link__bg">
+							<img src="img/video.jpg" alt="" class="video-link__poster">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="presentation">
+			<div class="container">
+				<div class="presentation__head">
+					<h2 class="presentation__title">ИТ мультисервис для малого бизнеса</h2>
+					<p>Белое Облако это единая площадка для аренды сереров, комплексной ИТ-поддержки, доработки и сопровождения 1С </p>
+				</div>
+				<div class="presentation__slider">
+					<div class="service-card">
+						<div class="service-card__pic">
+							<img src="img/icons/net.png" alt="">
+						</div>
+						<div class="service-card__text">
+							<h3 class="service-card__title">Аренда серверов</h3>
+							<ul>
+								<li>Для удаленной работы (RDP), 1С, SQL, почты.</li>
+								<li>Дата центры в Росси и Европе.</li>
+								<li>Доступность 99,9% с финансовой ответственностью.</li>
+								<li>Защита от изьятия и DDoS-атак.</li>
+								<li>Резервное копирование до 90 дней.</li>
+								<li>Легкая маштабируемость в 2 клика</li>
+								<li>Возможность оплаты от Юр. и Физ. лиц</li>
+							</ul>
+						</div>
+					</div>
+					<div class="service-card">
+						<div class="service-card__pic">
+							<img src="img/icons/laptop.png" alt="">
+						</div>
+						<div class="service-card__text">
+							<h3 class="service-card__title">Аренда лицензионного ПО</h3>
+							<ul>
+								<li>Аренда ПО Microsoft и др.</li>
+								<li>Аренда лицензий 1С</li>
+								<li>Использование свободно распостроняемого ПО</li>
+								<li>Консультация по лицензионной политике</li>
+							</ul>
+						</div>
+					</div>
+					<div class="service-card">
+						<div class="service-card__pic">
+							<img src="img/icons/lock.png" alt="">
+						</div>
+						<div class="service-card__text">
+							<h3 class="service-card__title">Повышенная безопасность</h3>
+							<ul>							
+								<li>Роботизированное отключение сервера по звонку</li>
+								<li>Антивирусная и анти-спам защита</li>
+								<li>Двухфакторная OTP-аутентификация</li>
+								<li>Firewall, VPN, защита от DDos-атак</li>
+								<li>Дублирование интернет канала в офисе</li>
+							</ul>
+						</div>
+					</div>
+					<div class="service-card">
+						<div class="service-card__pic">
+							<img src="img/icons/atom.png" alt="">
+						</div>
+						<div class="service-card__text">
+							<h3 class="service-card__title">Комплексная ИТ-поддержка</h3>
+							<ul>
+								<li>Физических и виртуальных серверов</li>
+								<li>В Дата центрах и на територии заказчика</li>
+								<li>Поьзовательских ПК и виртуальных рабочих мест</li>
+								<li>3 лини удаленной поддержки и выездные инженеры</li>
+								<li>Единая служба приема заявок всех типов 24/7</li>
+							</ul>
+						</div>
+					</div>
+					<div class="service-card">
+						<div class="service-card__pic">
+							<img src="img/icons/1c.png" alt="">
+						</div>
+						<div class="service-card__text">
+							<h3 class="service-card__title">Решения 1С</h3>
+							<ul>
+								<li>Аренда 1С в облаках</li>
+								<li>Выделенные серверы 1С и SQL</li>
+								<li>Сопровождение и доработка 1С</li>
+								<li>Разработка внешних отчетов и печатных форм</li>
+								<li>Резервное копирование до 90 дней.</li>
+								<li>Ускорение работы в 1С</li>									
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="presentation__footer">
+					<div class="row justify-content-center">
+						<div class="col-md-4">
+							<a href="#" class="btn btn--block btn--big btn--blue reasons__btn">Узнать больше</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="reasons">
+			<div class="container">
+				<h2 class="reasons__title">ДЛЯ ЧЕГО МАЛОМУ БИЗНЕСУ АРЕНДОВАТЬ СЕРВЕРА В  "БЕЛОМ ОБЛАКЕ"?</h2>
+				<div class="reasons__body">
+					<div class="row no-gutters">
+						<div class="col-md-3 reasons__sidebar">
+							<ul class="reasons__menu">
+								<li><img src="img/icons/shield.png" alt="">Обезопасить<br> бизнес</li>
+								<li><img src="img/icons/rocket.png" alt="">Ускорить<br> работу</li>
+								<li><img src="img/icons/piggy-bank.png" alt="">Сократить<br> расходы</li>
+								<li><img src="img/icons/chart.png" alt="">Повысить уровень сервиса ИТ</li>
+								<li><img src="img/icons/freelancer.png" alt="">Нанимать удаленных сотрудников</li>
+							</ul>
+						</div>
+						<div class="col-md-9">
+							<div class="reasons__text">
+								<ol>
+									<li>Отсутствие капитальных затрат на покупку лицензий, серверов и серверного оборудования.<br> Экономия до 70%.</li>
+									<li>Нет необходимости переплачивать за избыточные мощности. Платите только за то, что вы исользуете.</li>	
+									<li>Создайте свою лецензионную политику. Используйте свободное ПО или арендуйте лицензии с ежемесячной оплатой.</li>
+									<li>Не теряте деньги и репутацию в следствие простоя бизнеса, вызванного поломкой оборудования</li>
+									<li>Отсутствие затрат на модернизацию ПК и серверов. Всю нагузку берет на себя удаленный сервер. ПК работают в режиме "телевизора".</li>
+									<li>Нет затрат на зароботную плату ситемного администратора или обслуживающей компании. По всем вопросам вы можете обратиться в нашу службу поддержки.</li> 
+									<li>Экономия на аренде дополнительных помещений для выноса серверов.</li>
+									<li>Отсутстввие затрат на модернизацию, замену серверов и закупку комплектующих при поломках.</li> 
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="reasons__footer">
+					<div class="row justify-content-center">
+						<div class="col-md-4">
+							<a href="#" class="btn btn--block btn--big btn--blue reasons__btn">Убедили, беру!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-block">
+			<div class="container">
+				<h2 class="about-block__title">О "Белом облаке" в цифрах</h2>
+				<div class="about-block__body">
+					<div class="row justify-content-center">
+						<div class="col-lg-4">
+							<div class="about-block__item">
+								<div class="about-block__subtitle">6</div>
+								<div class="about-block__text">Дата-центров Россия/Европа</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="about-block__item">
+								<div class="about-block__subtitle">49 733</div>
+								<div class="about-block__text">пользовательских заявок<br> решены за последний год</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="about-block__item">
+								<div class="about-block__subtitle">2,3</div>
+								<div class="about-block__text">часа - максимальное время недоступности серверов  за последний год</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="about-block__item">
+								<div class="about-block__subtitle">17%</div>
+								<div class="about-block__text">Компаний перевели большую<br> часть сотрудников на удаленную работу</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="about-block__item">
+								<div class="about-block__subtitle">75%</div>
+								<div class="about-block__text">Уровень автоматизации<br> процессов управления активами</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="advantages">
+			<div class="container">
+				<h2 class="advantages__title">Преимущества работы на удаленных серверах в "белом облаке" для:</h2>
+				<div class="advantages__nav">
+					<div class="row no-gutters justify-content-center">
+						<div class="col-lg-2 advantages__trigger">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scheme">
+			<div class="container">
+				<h2 class="scheme__title">Переезд на удаленные сервера в "белое облако" это просто!</h2>
+				<div class="scheme__body">
+					<div class="row justify-content-center">
+						<div class="col-md-4">
+							<div class="scheme__item">
+								<div class="scheme__pic">
+									<img src="img/icons/folder.png" alt="">							
+								</div>
+								<div class="scheme__text">
+									<p>Разработанная нами автоматическая система под контролем нашей технической службы пернесет ваши данные в нерабочее время без остановки процессов.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="scheme__item">
+								<div class="scheme__pic">
+									<img src="img/icons/phone.png" alt="">							
+								</div>
+								<div class="scheme__text">
+									<p>Наши специалисты бесплатно помогут рассчитать и заказать сервер</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="scheme__item">
+								<div class="scheme__pic">
+									<img src="img/icons/users.png" alt="">							
+								</div>
+								<div class="scheme__text">
+									<p>Научим ваших пользователей работе на удаленных серверах. Ответим на все вопросы, подключим принтеры и необходимое оборудование</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="scheme__footer">
+					<div class="row justify-content-center">
+						<div class="col-md-4">
+							<a href="#" class="btn btn--block btn--big btn--blue scheme__btn">Проконсультируйте меня</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="services">
+			<div class="container">
+				<img src="img/1c.png" alt="" class="services__icon">
+				<div class="services__head">
+					<h2 class="services__title">Аренда программ 1С в "Белом Облаке"</h2>
+					<p>Забудте про покупку серверов и лицензий, резервном копированиии и администрировании, обновлениях и поиске исполнителей по доработке.</p>
+				</div>
+				<div class="services__body">
+					<div class="row justify-content-center">
+						<div class="col-md-4 services__item">
+							<div class="service-card service-card--light">
+								<div class="service-card__pic">
+									<img src="img/icons/document.png" alt="">
+								</div>
+								<div class="service-card__text">
+									<h3 class="service-card__title">Доработка и поддержка 1С</h3>
+									<ul>
+										<li>Доработка любых конфигураций</li>
+										<li>Абонентское сопровождение</li>
+										<li>Косультации пользователей</li>
+										<li>Свои програмисты 1С в штате</li>
+										<li>Общяемся понятным языком</li>
+										<li>Бесплатные обновления баз 1С</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 services__item">
+							<div class="service-card service-card--light">
+								<div class="service-card__pic">
+									<img src="img/icons/secure-connection.png" alt="">
+								</div>
+								<div class="service-card__text">
+									<h3 class="service-card__title">Безопасность и доступ к данным в облачной 1С </h3>
+									<ul>
+										<li>Доступ к базам по OTP паролю</li>
+										<li>Система резервного копирования</li>
+										<li>Система контроля доступа к данным</li>
+										<li>Выключение сервера по звонку</li>
+										<li>Работа серверов 24/7</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 services__item">
+							<div class="service-card service-card--light">
+								<div class="service-card__pic">
+									<img src="img/icons/thumb-up.png" alt="">
+								</div>
+								<div class="service-card__text">
+									<h3 class="service-card__title">Приимущества аренды 1С в облаке </h3>
+									<ul>
+										<li>Сокращение расходов</li>
+										<li>Работайте везде где есть Интернет</li>
+										<li>Всегда актуальная версия 1С</li>
+										<li>Легкость масштабирования</li>
+										<li>Ускоряйте отчеты и выгрузки</li>
+										<li>Арендуйте типовые конфигурации и дорабатывайте их в облаке</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__footer">
+					<div class="row justify-content-center">
+						<div class="col-md-4">
+							<a href="#" class="btn btn--block btn--big btn--white services__btn">Узнать подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="security">
+			<div class="container">
+				<h2 class="security__title">Безопасность данных при работе на серверах<br> в "белом облаке". два варианта развития событий.</h2>
+				<div class="security__head">
+					<div class="row justify-content-center align-items-end">
+						<div class="col-lg-3 security__trigger active">
+							<img src="img/hackerman.png" alt="" />
+							<div class="security__trigger-btn">Необоснованная проверка / Рейдерский захват</div>
+						</div>
+						<div class=" col-lg-3 security__trigger">
+							<img src="img/death-screen.png" alt="" />
+							<div class="security__trigger-btn">Поломка оборудования</div>
+						</div>
+						<div class=" col-lg-3 security__trigger">
+							<img src="img/alarm.png" alt="" />
+							<div class="security__trigger-btn">Использование нелицензионного ПО</div>
+						</div>
+					</div>					
+				</div>
+				<div class="security__body">
+					<div class="security__item">
+						xyu
+					</div>
+					<div class="security__item">
+						nu3ga
+					</div>
+					<div class="security__item">
+						джигурда
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- <footer class="footer">
+		
+	</footer> -->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	
+	<!--fancybox-->
+	<script src="libs/fancybox/jquery.fancybox.min.js"></script>
+	<!--slick-slider-->
+	<script src="libs/slick/slick.min.js"></script>
+	<!-- Скрипты для лендинга -->
+	<script src="js/script.js"></script>
+</body>
+</html>
