@@ -101,7 +101,43 @@ ol
 		width: 100%
 		padding-left: 10px
 		padding-right: 10px
+	&--video
+		font-size: 16px
+		background-color: $blue
+		position: relative
+		text-transform: uppercase
+		padding: 17px 53px 16px 135px
+		box-shadow: 0 0 15px 2px transparentize($blue,.8)
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			width: 80px
+			height: 100%
+			border-radius: inherit
+			background: url(../img/icons/triangle.svg) no-repeat center/15px auto,$blue
+			box-shadow: 0px 0px 48px 12px rgba(255, 255, 255, 0.5)
 		
+/*для slick-slider*/
+.slick
+	&-slide
+		opacity: 1
+	&-arrow
+		display: inline-block
+		width: 50px
+		height: 50px
+		line-height: 50px
+		text-align: center
+		font-size: 14px
+		color: #fff
+		background-color: $blue
+		cursor: pointer
+		&.prev
+			border-radius: 6px 0 0 6px
+		&.next
+			border-radius: 0 6px 6px 0
 /*ШАПКА*/
 .logo
 	display: inline-flex
@@ -353,6 +389,22 @@ ol
 			margin: 0 -15px 65px
 		.slick-track
 			display: flex
+	&__arrow
+		position: absolute
+		bottom: -25px
+		z-index: 2
+		&.prev
+			right: 50%
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				height: 20px
+				border-left: 1px solid #fff
+				top: calc(50% - 10px)
+				left: calc(100% - 1px)
+		&.next
+			left: 50%
 		
 .reasons
 	padding: 135px 0 125px
@@ -499,6 +551,8 @@ ol
 		max-width: 950px
 		margin: 0 auto 1.3em
 		text-align: center
+	&__head
+		margin: 0 0 40px
 	&__trigger
 		position: relative
 		padding-bottom: 44px
@@ -555,10 +609,293 @@ ol
 		transition: all .3s ease
 		.active>&
 			color: $brick
-			background-color: #fff		
+			background-color: #fff
+			box-shadow: 0px 0px 48px 12px transparentize($brick,.8)
+	&__footer
+		margin: 40px 0 0
+		text-align: center
 
-		
+.chars
+	display: flex
+	&__item
+		width: 50%
+		background-color: transparentize($blue,.75)
+		&:nth-child(2n)
+			background-color: transparentize($red,.75)
+			ul
+				>li:before
+					color: $red
+	&__head
+		display: flex
+		flex-direction: column
+		justify-content: center
+		background-color: $blue
+		color: #fff
+		text-align: center
+		min-height: 60px
+		padding: 9px
+		font-size: 18px
+		line-height: 28/18*1
+		font-weight: 400
+	&__item:nth-child(2n) &__head
+		background-color: $red
+	&__text
+		padding: 34px 80px 17px 30px
+		ul
+			padding: 0
+			margin: 0
+			>li
+				padding-left: 24px
+				position: relative
+				margin: 0 0 1.1em
+				&:before
+					content: ''
+					display: inline-block
+					color: $blue
+					border-left: 10px solid
+					border-top: 5px solid transparent
+					border-bottom: 5px solid transparent
+					position: absolute
+					left: 0
+					top: .55em	
+.benefits
+	padding: 87px 0 63px
+	&__head
+		text-align: center
+		font-size: 24px
+		line-height: normal
+		font-weight: 400
+		margin: 0 0 44px
+	&__item
+		text-align: center
+		margin: 0 0 30px
+		line-height: 22/16*1
+	&__subtitle
+		color: $yellow
+		font: 
+			size: 50px
+			weight: 600
+		line-height: 1
+		letter-spacing: .04em
+.order-line
+	padding: 114px 0 112px
+	clip-path: polygon(0 40px,100% 0,100% calc(100% - 40px),0 100%)
+	background: url(../img/order-bg.jpg) no-repeat center/cover
+	color: #fff
+	&__title
+		text-align: right
+		padding-right: 50px
+		font: 
+			size: 26px
+			weight: 400
+		line-height: normal
+		margin: 0
+		text-transform: none
+		letter-spacing: 0
+	&__btn
+		width: 256px
+		margin-left: 30px
+		box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.3)
+.review-card
+	width: 350px
+	margin: 0 15px 30px
+	background-color: #f7fafd
+	border: 1px solid #dbe7f2
+	border-radius: 6px
+	padding: 50px 30px 44px
+	text-align: center
+	p
+		margin: 0
+	&__img
+		display: block
+		width: 80px
+		height: 80px
+		background-color: #fff
+		border-radius: 50%
+		+obj
+		margin: 0 auto 25px
+	&__head
+		font-size: 14px
+		line-height: 23/14*1
+		margin: 0 0 17px
+		&:after
+			content: ''
+			display: block
+			max-width: 160px
+			margin: 17px auto 0
+			border-top: 1px solid $blue
+	&__title
+		text-transform: uppercase
+		margin: 0 0 .5em
+	&.slick-slide
+		height: auto
+		flex: 1 1 auto
+.reviews
+	padding: 86px 0 59px
+	&__title
+		text-align: center
+		margin: 0 0 1.35em
+	&__slider
+		position: relative
+		&:not(.slick-initialized)
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -15px
+		.slick-track
+			display: flex
+		.slick-list
+			margin: 0 -15px
+	&__arrow
+		position: absolute
+		z-index: 2
+		top: calc(50% - 25px)
+		&.prev
+			left: -65px
+		&.next
+			right: -65px
+.faq
+	background: url(../img/blue-bg.jpg) no-repeat center top/cover
+	clip-path: polygon(0 40px,100% 0,100% calc(100% - 40px),0 100%)
+	color: #fff
+	padding: 130px 0
+	font-weight: 400
+	line-height: 1.5
+	&__img
+		display: block
+		margin: 51px auto 0
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		min-height: 80px
+		border-top: 1px solid #fff
+		padding: 13px 93px 18px 40px
+		position: relative
+		cursor: pointer
+		user-select: none
+		transition: all .3s ease
+		&:last-child
+			border-bottom: 1px solid #fff
+		&:after
+			content: '+'
+			display: block
+			font-size: 20px
+			line-height: 1
+			position: absolute
+			top: 30px
+			right: 40px
+		&.open
+			background-color: #fff
+			border-radius: 10px
+			color: #6f6f6f
+			padding-top: 25px
+			padding-bottom: 32px
+			&:after
+				content: '-'
+				color: $blue
+		&.open + &
+			border-top-color: transparent
+	&__question
+		transition: all .3s ease
+	&__answer
+		display: none
+		line-height: 1.25
+	&__item.open &__question
+		color: #2f2e2e
+		margin: 0 0 .5em
+	&__item.open &__answer
+		display: block
+.partners
+	padding: 85px 0 61px
+	&__title
+		text-align: center
+		margin: 0 0 1.3em
+	&__slider
+		&:not(.slick-initialized)
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -15px
+		.slick-list
+			margin: 0 -15px
+	&__arrow
+		position: absolute
+		top: 56px
+		&.prev
+			left: -65px
+		&.next
+			right: -65px			
+	&__item
+		width: 255px
+		height: 160px
+		position: relative
+		margin: 0 15px 30px
+		background-color: #f7fafd
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			filter: grayscale(1)
+			opacity: .5
+			max-width: 80%
+			max-height: 80%
+	
 /*ПОДВАЛ*/
-
+.footer
+	background: url(../img/blue-bg.jpg) no-repeat center/cover
+	background-attachment: scroll
+	padding: 84px 0 49px
+	font-size: 14px
+	line-height: 24/14*1
+	color: #fff
+	&__subtitle
+		font-size: 16px
+		line-height: 1.5
+		text-transform: uppercase
+		margin: 0 0 .7em
+	&__menu
+		padding: 0
+		margin: 0 0 1.9em
+		&:last-child
+			margin: 0
+		a
+			color: inherit
+		>li
+			margin: 0 0 .7em
+	&__contacts
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		text-align: right
+		line-height: 30/14*1
+		p
+			margin: 0 0 2.8em
+		a
+			color: inherit
+			font-size: 16px
+			line-height: 18/16*1
+			margin: 0 0 .8em
+	&__btn
+		margin: 3px 0 10px
+	&__social
+		margin: auto 0 70px
+		a
+			display: inline-block
+			width: 30px
+			height: 30px
+			text-align: center
+			line-height: 30px
+			background-color: #0a909f
+			color: #fff
+			font-size: 16px
+			border-radius: 50%
+			margin: 0 0 0 11px
+			&:hover
+				text-decoration: none !important			
+	&__copy
+		margin: auto 0 9px -30px
+		line-height: 1.5
+		
+			
 /*АДАПТИВ*/
 @import "adaptive"

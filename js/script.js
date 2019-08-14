@@ -4,10 +4,11 @@
 	variableWidth: true,
 	centerMode: true,
 	centerPadding: 0,
-	arrows: false
+	prevArrow: '<span class="presentation__arrow prev fa-arrow-left"></span>',
+	nextArrow: '<span class="presentation__arrow next fa-arrow-right"></span>'
 })
 
-//Самописный "плагин" для табов
+//Самописный "плагин" для табов 
 $.fn.tabs = function(options){
 	var defaultSettings = {
 		trigger: '.tabs__trigger',
@@ -38,4 +39,18 @@ $.fn.tabs = function(options){
 $('.security').tabs({
 	trigger: '.security__trigger',
 	element: '.security__item'
+})
+
+$('.reviews__slider').slick({
+	slidesToShow: 3,
+	prevArrow: '<span class="reviews__arrow prev fa-arrow-left"></span>',
+	nextArrow: '<span class="reviews__arrow next fa-arrow-right"></span>'
+})
+$('.faq__item').click(function(){
+	$(this).toggleClass('open').siblings().removeClass('open');
+})
+$('.partners__slider').slick({
+	slidesToShow: 4,
+	prevArrow: '<span class="partners__arrow prev fa-arrow-left"></span>',
+	nextArrow: '<span class="partners__arrow next fa-arrow-right"></span>'
 })
