@@ -19,35 +19,37 @@
 		Я понимаю, что к существующему сайту уже подключены 2 слайдера (owlCarousel и bxSlider), но
 		1) они откровенно говоря - говно
 		2) у меня нет никакого желания переопределять стили, которые разработчик задал непосредственно элементам слайдера
-		3) В style.css остались даже какие-то стили для slick
 	-->
 	<link href="libs/slick/slick.css" rel="stylesheet">
 	
-	<!--Стили для лендинга. Лучше подключать с условием только для этой страницы-->
+	<!--Стили для лендинга. Лучше подключать с условием только для этой страницы. Сайт на modx, поэтому как-то так http://modx.im/blog/questions/4638.html -->
 	<link href="css/landing.css" rel="stylesheet">
 </head>
 <body class="landing">
 	<header class="header">
 		<div class="header__topline">
 			<div class="container">
-				<div class="row align-items-end">
-					<div class="col-sm-6">
+				<div class="row align-items-lg-end align-items-center">
+					<div class="col-lg-6 col-md-5 col-sm-6">
 						<a href="/" class="logo">
 							<img src="img/logo.jpg" alt="" class="logo__img">
 							<span class="logo__text">Удаленные серверы для малого бизнеса</span>
 						</a>
 					</div>
-					<div class="col-sm-6 text-right">
+					<div class="col-lg-6 col-md-6 text-lg-right text-center d-none d-md-block">
 						<a href="tel:+74992130450" class="header__phone">+7 (499) 213-04-50</a>
 						<button class="btn modal-phone">Перезвоните мне</button>
+					</div>
+					<div class="col-md-1 col-sm-6 text-right d-lg-none">
+						<span class="menu-btn"></span>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="header__bottomline">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md-9">
+				<div class="row align-items-center d-lg-flex d-block">
+					<div class="col-lg-9 col-md-12">
 						<ul class="header__menu">
 							<li class="has-children">
 								<a href="#">Аренда серверов</a>
@@ -88,7 +90,7 @@
 							</li>							
 						</ul>
 					</div>
-					<div class="col-md-3">
+					<div class="col-lg-3 col-md-12">
 						<a href="#" class="header__login">Войти в личный кабинет</a>
 					</div>
 				</div>
@@ -99,7 +101,7 @@
 		<div class="top-block">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<div class="top-block__item">
 							<div class="top-block__icon">
 								<img src="img/icons/net.png" alt="">
@@ -122,7 +124,7 @@
 							<p>1С в облаке, выделенные сервера 1С, доработки, сопоровождение</p>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-6">
 						<a href="https://www.youtube.com/embed/EV5vjsUJqgE" class="video-link top-block__media" data-fancybox>
 							<img src="img/laptop.png" alt="" class="video-link__bg">
 							<img src="img/video.jpg" alt="" class="video-link__poster">
@@ -218,8 +220,8 @@
 				</div>
 				<div class="presentation__footer">
 					<div class="row justify-content-center">
-						<div class="col-md-4">
-							<a href="#" class="btn btn--block btn--big btn--blue reasons__btn">Узнать больше</a>
+						<div class="col-md-6 col-lg-4">
+							<a href="#" class="btn btn--block btn--big btn--blue presentation__btn">Узнать больше</a>
 						</div>
 					</div>
 				</div>
@@ -230,7 +232,7 @@
 				<h2 class="reasons__title">ДЛЯ ЧЕГО МАЛОМУ БИЗНЕСУ АРЕНДОВАТЬ СЕРВЕРА В  "БЕЛОМ ОБЛАКЕ"?</h2>
 				<div class="reasons__body">
 					<div class="row no-gutters">
-						<div class="col-md-3 reasons__sidebar">
+						<div class="col-lg-3 col-md-12 reasons__sidebar">
 							<ul class="reasons__menu">
 								<li><img src="img/icons/shield.png" alt="">Обезопасить<br> бизнес</li>
 								<li><img src="img/icons/rocket.png" alt="">Ускорить<br> работу</li>
@@ -239,7 +241,7 @@
 								<li><img src="img/icons/freelancer.png" alt="">Нанимать удаленных сотрудников</li>
 							</ul>
 						</div>
-						<div class="col-md-9">
+						<div class="col-lg-9 col-md-12">
 							<div class="reasons__text">
 								<ol>
 									<li>Отсутствие капитальных затрат на покупку лицензий, серверов и серверного оборудования.<br> Экономия до 70%.</li>
@@ -257,7 +259,7 @@
 				</div>
 				<div class="reasons__footer">
 					<div class="row justify-content-center">
-						<div class="col-md-4">
+						<div class="col-lg-4 col-md-6">
 							<a href="#" class="btn btn--block btn--big btn--blue reasons__btn">Убедили, беру!</a>
 						</div>
 					</div>
@@ -269,31 +271,31 @@
 				<h2 class="about-block__title">О "Белом облаке" в цифрах</h2>
 				<div class="about-block__body">
 					<div class="row justify-content-center">
-						<div class="col-lg-4">
+						<div class="col-xl-4 col-lg-6">
 							<div class="about-block__item">
 								<div class="about-block__subtitle">6</div>
 								<div class="about-block__text">Дата-центров Россия/Европа</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-xl-4 col-lg-6">
 							<div class="about-block__item">
 								<div class="about-block__subtitle">49 733</div>
 								<div class="about-block__text">пользовательских заявок<br> решены за последний год</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-xl-4 col-lg-6">
 							<div class="about-block__item">
 								<div class="about-block__subtitle">2,3</div>
 								<div class="about-block__text">часа - максимальное время недоступности серверов  за последний год</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-xl-4 col-lg-6">
 							<div class="about-block__item">
 								<div class="about-block__subtitle">17%</div>
 								<div class="about-block__text">Компаний перевели большую<br> часть сотрудников на удаленную работу</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-xl-4 col-lg-6">
 							<div class="about-block__item">
 								<div class="about-block__subtitle">75%</div>
 								<div class="about-block__text">Уровень автоматизации<br> процессов управления активами</div>
@@ -308,8 +310,64 @@
 				<h2 class="advantages__title">Преимущества работы на удаленных серверах в "белом облаке" для:</h2>
 				<div class="advantages__nav">
 					<div class="row no-gutters justify-content-center">
-						<div class="col-lg-2 advantages__trigger">
-							
+						<div class="col-lg-3 col-md-4 advantages__trigger">
+							<img src="img/advantages/leader-min.png" alt="" class="advantages__icon">
+							<div class="advantages__btn">Руководителей</div>
+						</div>
+						<div class="col-lg-3 col-md-4 advantages__trigger">
+							<img src="img/advantages/employee-min.png" alt="" class="advantages__icon">
+							<div class="advantages__btn">Сотрудников</div>
+						</div>
+						<div class="col-lg-3 col-md-4 advantages__trigger">
+							<img src="img/advantages/accountant-min.png" alt="" class="advantages__icon">
+							<div class="advantages__btn">Бухгалтеров</div>
+						</div>
+					</div>
+				</div>
+				<div class="advantages__body">
+					<div class="advantages__item">
+						<div class="advantages__text" style="background-image:url(img/advantages/leader.png)">
+							<ol>
+								<li>Доступ к рабочему столу, файлам, прайс-листам, презентациям из любого места, в командировках, филиалах, из дома с любого устройства даже через мобильный интерент</li>
+								<li>При поломке, краже, изьятиии рабочего ПК или ноутбука вся рабочая информация сохранится.</li>
+								<li>Служба поддержки окажет помощь, устранит неисправности, проконсультирует и восстановит данные 24/7.</li>
+								<li>Ускорение работы в десятки раз даже на старом маломощном ПК, за счет ресурсов сервера.</li>
+								<li>Быстрое востановлениев поврежденных и случайно удаленных файлов в течение часа.</li>
+								<li>Поиск, обновление, установка нужных для работы программ</li>
+							</ol>
+						</div>
+						<div class="advantages__footer">
+							<a href="//www.youtube.com/embed/EV5vjsUJqgE" class="btn btn--video" data-fancybox="">О выгоде для руководителей за 1,5 минуты</a>
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__text" style="background-image:url(img/advantages/employee.png)">
+							<ol>
+								<li>Доступ к рабочему столу, файлам, прайс-листам, презентациям из любого места, в командировках, филиалах, из дома с любого устройства даже через мобильный интерент</li>
+								<li>При поломке, краже, изьятиии рабочего ПК или ноутбука вся рабочая информация сохранится.</li>
+								<li>Служба поддержки окажет помощь, устранит неисправности, проконсультирует и восстановит данные 24/7.</li>
+								<li>Ускорение работы в десятки раз даже на старом маломощном ПК, за счет ресурсов сервера.</li>
+								<li>Быстрое востановлениев поврежденных и случайно удаленных файлов в течение часа.</li>
+								<li>Поиск, обновление, установка нужных для работы программ</li>
+							</ol>
+						</div>
+						<div class="advantages__footer">
+							<a href="//www.youtube.com/embed/EV5vjsUJqgE" class="btn btn--video" data-fancybox="">О выгоде для сотрудников за 1,5 минуты</a>
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__text" style="background-image:url(img/advantages/accountant.png)">
+							<ol>
+								<li>Доступ к рабочему столу, файлам, прайс-листам, презентациям из любого места, в командировках, филиалах, из дома с любого устройства даже через мобильный интерент</li>
+								<li>При поломке, краже, изьятиии рабочего ПК или ноутбука вся рабочая информация сохранится.</li>
+								<li>Служба поддержки окажет помощь, устранит неисправности, проконсультирует и восстановит данные 24/7.</li>
+								<li>Ускорение работы в десятки раз даже на старом маломощном ПК, за счет ресурсов сервера.</li>
+								<li>Быстрое востановлениев поврежденных и случайно удаленных файлов в течение часа.</li>
+								<li>Поиск, обновление, установка нужных для работы программ</li>
+							</ol>
+						</div>
+						<div class="advantages__footer">
+							<a href="//www.youtube.com/embed/EV5vjsUJqgE" class="btn btn--video" data-fancybox="">О выгоде для бухгалтеров за 1,5 минуты</a>
 						</div>
 					</div>
 				</div>
@@ -354,7 +412,7 @@
 				</div>
 				<div class="scheme__footer">
 					<div class="row justify-content-center">
-						<div class="col-md-4">
+						<div class="col-lg-4 col-md-6">
 							<a href="#" class="btn btn--block btn--big btn--blue scheme__btn">Проконсультируйте меня</a>
 						</div>
 					</div>
@@ -370,7 +428,7 @@
 				</div>
 				<div class="services__body">
 					<div class="row justify-content-center">
-						<div class="col-md-4 services__item">
+						<div class="col-lg-4 col-md-6 services__item">
 							<div class="service-card service-card--light">
 								<div class="service-card__pic">
 									<img src="img/icons/document.png" alt="">
@@ -388,7 +446,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 services__item">
+						<div class="col-lg-4 col-md-6 services__item">
 							<div class="service-card service-card--light">
 								<div class="service-card__pic">
 									<img src="img/icons/secure-connection.png" alt="">
@@ -405,7 +463,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 services__item">
+						<div class="col-lg-4 col-md-6 services__item">
 							<div class="service-card service-card--light">
 								<div class="service-card__pic">
 									<img src="img/icons/thumb-up.png" alt="">
@@ -427,7 +485,7 @@
 				</div>
 				<div class="services__footer">
 					<div class="row justify-content-center">
-						<div class="col-md-4">
+						<div class="col-lg-4 col-md-6">
 							<a href="#" class="btn btn--block btn--big btn--white services__btn">Узнать подробнее</a>
 						</div>
 					</div>
@@ -439,15 +497,15 @@
 				<h2 class="security__title">Безопасность данных при работе на серверах<br> в "белом облаке". два варианта развития событий.</h2>
 				<div class="security__head">
 					<div class="row justify-content-center align-items-end">
-						<div class="col-lg-3 security__trigger active">
+						<div class="col-lg-3 col-md-4 security__trigger">
 							<img src="img/hackerman.png" alt="" />
 							<div class="security__trigger-btn">Необоснованная проверка / Рейдерский захват</div>
 						</div>
-						<div class=" col-lg-3 security__trigger">
+						<div class=" col-lg-3 col-md-4 security__trigger">
 							<img src="img/death-screen.png" alt="" />
 							<div class="security__trigger-btn">Поломка оборудования</div>
 						</div>
-						<div class=" col-lg-3 security__trigger">
+						<div class=" col-lg-3 col-md-4 security__trigger">
 							<img src="img/alarm.png" alt="" />
 							<div class="security__trigger-btn">Использование нелицензионного ПО</div>
 						</div>
@@ -628,10 +686,10 @@
 		<div class="faq">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-lg-6 col-md-3">
 						<img src="img/faq.png" class="faq__img" alt="">
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-6 col-md-9">
 						<div class="faq__list">
 							<div class="faq__item">
 								<div class="faq__question">Как я могу быть уверенным что никто кроме меня не получит доступ к моим данным?</div>
@@ -696,7 +754,7 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-lg-3 d-lg-block d-none">
 					<h3 class="footer__subtitle">Аренда серверов</h3>
 					<ul class="footer__menu">
 						<li><a href="#">Офис в облаках</a></li>
@@ -715,7 +773,7 @@
 						<li><a href="#">Продажа лицензий И програмных продуктов 1С</a></li>
 					</ul>
 				</div>
-				<div class="col-md-3">
+				<div class="col-lg-3 d-lg-block d-none">
 					<h3 class="footer__subtitle">Безопасность</h3>
 					<ul class="footer__menu">
 						<li><a href="#">Безопасность в "Белом Облаке"</a></li>
@@ -726,7 +784,7 @@
 						<li><a href="#">Cистема переключения интернет канала</a></li>
 					</ul>
 				</div>
-				<div class="col-md-3">
+				<div class="col-lg-3 d-lg-block d-none">
 					<h3 class="footer__subtitle">Услуги</h3>
 					<ul class="footer__menu">
 						<li><a href="#">ИТ-аутсорсинг</a></li>
@@ -743,7 +801,7 @@
 						<li><a href="#">Кейсы</a></li>
 					</ul>
 				</div>
-				<div class="col-md-3 footer__contacts">
+				<div class="col-lg-3 footer__contacts">
 					<p>Формируем безопасное удаленное офисное пространство с выводом всех IT-сервисов на серверы в России или за рубеж.</p>
 					<a href="mailto:info@whitecloud24.ru">info@whitecloud24.ru</a>
 					<a href="tel:+74992130450">+7 (499) 213-04-50</a>

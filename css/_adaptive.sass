@@ -1,6 +1,8 @@
 ﻿@media(min-width: 992px)
 	.header
 		&__menu
+			&.clone
+				display: none
 			>li
 				>ul
 					position: absolute
@@ -21,16 +23,302 @@
 						margin: 0 0 .4em
 				&:hover>ul
 					display: block
+					
+	.service-card
+		&.slick-slide
+			margin: 0
+			transform: translateX(200.5%) scale(.5)
+			//transform-origin: right center
+			transition: transform .3s linear			
+		&.slick-active
+			transform: translateX(40%) scale(.7) 
+		&.slick-current
+			transform: scale(1)
+			//transform-origin: center
+			position: relative
+			z-index: 2
+			border-color: $blue
+		&.slick-current ~ &
+			//transform-origin: left center
+			transform: translateX(-200.5%) scale(.5) 
+		&.slick-current + &
+			transform: translateX(-40%) scale(.7)
+			position: relative
+			z-index: 1
+
+@media(max-width: 1239px)
+	//для стрелок слайдеров за пределами контейнера
+	.reviews
+		&__arrow
+			&.prev
+				left: -15px
+			&.next
+				right: -15px
+	.partners
+		&__arrow
+			z-index: 2
+			&.prev
+				left: -15px
+			&.next
+				right: -15px
 	
+
 @media(max-width:1199px)
-	.wrapper
-		max-width: 992px
+	.top-block
+		&__item
+			font-size: inherit
+		&__subtitle
+			font-size: 26px
+	.about-block
+		&__title
+			margin: 0 auto 1em
+		&__body
+			padding: 30px 0
+	.advantages
+		&__text
+			padding-left: 200px
+			background-position-x: 20px
   
-//@media(max-width:991px)
-	
+@media(max-width:991px)
+	h2
+		font-size: 28px
+	.btn
+		&--video
+			padding-right: 25px
+			padding-left: 105px
+	.menu-btn
+		display: block
+		font: normal normal 30px/1 fontAwesome
+		width: 1em
+		text-align: center
+		transition: all .3s ease
+		margin: 0 0 0 auto
+		&:before
+			content: '\f0c9'			
+		&.active
+			color: $yellow
+			transform: rotate3d(1,0,0,180deg) perspective(100px)
+			&:before
+				content: '\f00d'
+	.header
+		position: relative
+		&__bottomline
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			z-index: 2
+			pointer-events: none
+			clip-path: polygon(0 0,100% 0,100% 0,0 0)
+			transition: all .3s ease
+			&.open
+				pointer-events: all
+				clip-path: polygon(0 0,100% 0,100% 100%,0 100%)
+		&__menu
+			&:nth-of-type(n+2)
+				display: none
+			>li
+				display: block
+				margin: 0
+				border-bottom: 1px solid
+				&:last-child
+					border-bottom: none
+				&.back
+					>a
+						color: $yellow
+						font-weight: 600
+	.top-block
+		padding: 70px 0
+		clip-path: polygon(0 0, 100% 0,100% calc(100% - 20px),0 100%)
+		&__subtitle
+			width: auto
+		&__media
+			margin: 30px auto 0
+	.presentation
+		padding: 40px 0
+		&__head
+			font-size: inherit
+		&__slider
+			margin: 0 0 30px
+			.slick-list
+				margin: 0 -15px
+				
+	.service-card
+		&.slick-slide
+			margin: 0 15px
+			
+	.reasons
+		padding: 60px 0
+		clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%)
+		&__menu
+			margin: 0
+			br
+				display: none
+		&__text
+			margin: 0
+	.about-block
+		padding: 60px 0 30px
+		&__body
+			padding: 0
+		&__item
+			margin: 0 0 50px
+	.advantages
+		padding: 60px 0
+		clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%)
+		&__text
+			padding: 35px 35px 50px 200px
+	.scheme
+		padding: 40px 0
+	.services
+		padding: 60px 0
+		clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%)
+		&__head
+			font-size: inherit
+		&__icon
+			display: none
+	.security
+		padding: 60px 0
+		clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%)
+		@supports(clip-path: polygon(0 0,100% 0,100% 100%))
+			margin-top: -20px
+		&__title
+			br
+				display: none
+	.chars
+		&__text
+			padding: 20px
+	.benefits
+		padding: 40px 0
+		&__head
+			font-size: inherit
+	.order-line
+		padding: 60px 0
+		clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%)
+		text-align: center
+		&__title
+			text-align: inherit
+			margin: 0 0 1.5em
+			padding: 0
+		&__btn
+			margin: 0
+	.reviews
+		padding: 40px 0
+	.review-card
+		&.slick-slide
+			margin: 0 15px
+	.faq
+		padding: 60px 0
+		clip-path: polygon(0 20px,100% 0,100% calc(100% - 20px),0 100%)
+	.partners
+		padding: 40px 0
+		&__item
+			&.slick-slide
+				margin-bottom: 0
+	.footer
+		padding: 30px 0
+		&__contacts
+			display: block
+			text-align: center
+			a
+				display: block
+				width: max-content
+				max-width: 100%
+				margin: 0 auto .8em
+		&__btn
+			margin: 10px 0 40px
+		&__social
+			margin: 0 0 30px
+			a
+				display: inline-block
+				width: 30px
+				margin: 0 8px 10px
+		&__copy
+			margin: 0
 
-//@media(max-width:767px)
-	
+@media(max-width: 767px)
+	.logo
+		display: inline-block
+		&__text
+			display: none
+		&__img
+			width: 75px
+			margin: 0
+	.advantages
+		&__trigger
+			margin-bottom: 5px
+		&__icon
+			display: none
+		&__btn
+			position: static
+			width: 100%
+		&__text
+			background-size: 0
+			padding: 20px
+	.security
+		&__trigger
+			padding-bottom: 0
+			margin-bottom: 5px
+			&:before,&:after
+				display: none
+			img
+				display: none
+			&-btn
+				position: static
+				width: 100%
+	.chars
+		display: block
+		&__item
+			width: auto
+	.faq
+		&__img
+			width: 150px
+			margin: 0 auto 30px
+		&__item
+			padding: 13px 50px 18px 15px
+			&.open
+				padding-top: 20px
+				padding-bottom: 20px
+			&:after
+				right: 20px			
 
-//@media(max-width:480px)
-	
+@media(max-width: 575px)
+	h2
+		font-size: 22px
+	.btn
+		&--video
+			text-transform: none
+			padding: 16px
+			white-space: normal
+			&:before
+				display: none				
+	.header
+		&__topline
+			.row
+				flex-wrap: nowrap
+	.top-block
+		padding: 40px 0
+		clip-path: polygon(0 0, 100% 0,100% calc(100% - 10px),0 100%)
+		&__item
+			padding-left: 60px
+			line-height: 1.5
+		&__icon
+			width: 40px
+			height: 40px
+		&__subtitle
+			font-size: 18px
+	.reasons,
+	.advantages,
+	.services,
+	.security,
+	.order-line,
+	.faq
+		padding: 40px 0
+		clip-path: polygon(0 10px,100% 0,100% calc(100% - 10px),0 100%)
+	.service-card
+		padding: 30px 20px
+	.services
+		&__item
+			margin-bottom: 15px
+	.security
+		@supports(clip-path: polygon(0 0,100% 0,100% 100%))
+			margin-top: -10px
