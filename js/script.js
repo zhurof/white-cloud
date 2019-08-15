@@ -3,6 +3,8 @@
 }
 $('.presentation__slider').slick({
 	slidesToShow: 3,
+	useCss: false,
+	useTransform: false,
 	focusOnSelect: true,
 	variableWidth: true,
 	centerMode: true,
@@ -16,6 +18,8 @@ $('.presentation__slider').slick({
 			breakpoint: 992,
 			settings: {
 				slidesToShow: 2,
+				useCss: true,
+				useTransform: true,
 				centerMode: false,
 				variableWidth: false,
 				focusOnSelect: false,
@@ -26,6 +30,8 @@ $('.presentation__slider').slick({
 			breakpoint: 768,
 			settings: {
 				slidesToShow: 1,
+				useCss: true,
+				useTransform: true,
 				centerMode: false,
 				variableWidth: false,
 				focusOnSelect: false,
@@ -48,13 +54,12 @@ $.fn.tabs = function(options){
 			triggers = tabs.find(settings.trigger),
 			elements = tabs.find(settings.element),
 			currentIndex = triggers.index('.active');
-	console.log(currentIndex);		
 		
 	if(currentIndex == -1){
 		currentIndex = 0;
 		triggers.eq(0).addClass('active');
 	}
-	console.log('2' + currentIndex);	
+	
 	elements.hide().eq(currentIndex).show();
 	
 	triggers.click(function(e){

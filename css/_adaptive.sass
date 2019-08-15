@@ -1,4 +1,7 @@
 ﻿@media(min-width: 992px)
+	.btn
+		&:hover
+			text-decoration: underline !important //God, forgive me
 	.header
 		&__menu
 			&.clone
@@ -23,6 +26,14 @@
 						margin: 0 0 .4em
 				&:hover>ul
 					display: block
+	.partners
+		&__item
+			img
+				transition: all .3s ease
+			&:hover
+				img
+					filter: none
+					opacity: 1
 					
 	.service-card
 		&.slick-slide
@@ -45,6 +56,11 @@
 			transform: translateX(-40%) scale(.7)
 			position: relative
 			z-index: 1
+			
+	.security__trigger-btn,
+	.advantages__btn
+		&:hover
+			text-decoration: underline
 
 @media(max-width: 1239px)
 	//для стрелок слайдеров за пределами контейнера
@@ -142,6 +158,8 @@
 			margin: 0 0 30px
 			.slick-list
 				margin: 0 -15px
+			.slick-track
+				transition: none
 				
 	.service-card
 		&.slick-slide
