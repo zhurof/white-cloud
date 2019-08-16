@@ -52,15 +52,15 @@ $.fn.tabs = function(options){
 	
 	var tabs = this,
 			triggers = tabs.find(settings.trigger),
-			elements = tabs.find(settings.element),
-			currentIndex = triggers.index('.active');
+			elements = tabs.find(settings.element);
+			//currentIndex = triggers.index('.active');
 		
-	if(currentIndex == -1){
+/* 	if(currentIndex == -1){
 		currentIndex = 0;
 		triggers.eq(0).addClass('active');
-	}
-	
-	elements.hide().eq(currentIndex).show();
+	} */
+	triggers.removeClass('active').eq(0).addClass('active');
+	elements.hide().eq(0).show();
 	
 	triggers.click(function(e){
 		e.preventDefault();
