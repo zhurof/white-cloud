@@ -1,6 +1,16 @@
 ﻿function is_mobile(){
 	return $(window).width()<992
 }
+
+/* $('.presentation__slider').each(function(){
+	if(!is_mobile()){//только для полной версии
+		//создание клонов карточек для избежания бага с бесконечным скроллом в стилизованном slick-slider-е
+		for(var i=0; i<2; i++){
+			$(this).find('.service-card').clone().appendTo(this);
+		}
+		//итого получим в 4 раза больше слайдов (x*2*2)
+	}
+}) */
 $('.presentation__slider').slick({
 	slidesToShow: 3,
 	useCss: false,
